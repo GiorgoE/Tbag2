@@ -150,6 +150,19 @@
 		}
 		
 		
+		function dropdown2(){ 
+		    var disp2 = document.getElementsByClassName('attr');
+			for(i=0; i<disp2.length; i++) 
+			{
+				if (disp2[i].style.display != 'none')
+				{
+						disp2[i].style.display = 'none';
+				} else {
+						disp2[i].style.display = 'block';
+				}
+			}
+		}
+		
 			
 		function fadeitoutandin(){ 
 		  		$('#statementdiv').fadeOut(0);

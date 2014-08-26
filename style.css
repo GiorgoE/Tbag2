@@ -54,6 +54,10 @@ body {
 	display: none;
 }
 
+.attr {
+	display: none;
+}
+
 #attributes {
 	float: right;
 	margin-right: 5%;
