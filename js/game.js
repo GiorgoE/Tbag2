@@ -19,6 +19,10 @@
 					"bullet",
 					];
 		
+////////////STYLE////////////////////////
+
+		var buttoncolor = "#303030";
+
 ////////////ATTRIBUTESS////////////////////////
 		
 		var str = 6;
@@ -85,6 +89,14 @@
 		
 		var S10 = "You arrive at the Shady Hound, a notoriously treacherous place filled with sailors and thieves but the ale is good and the food is edible (most of the time). *******";
 		
+		
+		
+     ////////// CSS FUNCS //////////////
+	 function highlightbutton(){
+	 document.getElementsByClassName("buttons").style.backgroundcolor = "green";
+	 }
+		
+		
 	 ///////// CORE FUNCTIONS ///////////
 	 
 	 
@@ -92,6 +104,10 @@
 			document.getElementById("Button1").innerHTML = clear.toString();
 			document.getElementById("Button2").innerHTML = clear.toString();
 			document.getElementById("Button3").innerHTML = clear.toString();
+			
+			document.getElementById("Button1").style.backgroundColor="transparent";
+			document.getElementById("Button2").style.backgroundColor="transparent";
+			document.getElementById("Button3").style.backgroundColor="transparent";
 			//$('#Button1').fadeOut(0);
 			//$('#Button2').fadeOut(0);
 			//$('#Button3').fadeOut(0);
@@ -151,6 +167,7 @@
 			
 		}
 			function funcIntroA1(){
+					document.getElementById("Button1").style.backgroundColor = buttoncolor;
 					document.getElementById("Button1").innerHTML = introA1.toString();
 					document.getElementById("Button1").onclick = function () { funcS1() };
 					//document.onClick.$("p").fadeOut("5000"); - attempt at fade
@@ -171,18 +188,20 @@
 		}
 		
 			function funcS1A1(){ // stay + die
-				
+				document.getElementById("Button1").style.backgroundColor = buttoncolor;
 				document.getElementById("Button1").innerHTML = S1A1.toString();
 				document.getElementById("Button1").onclick = function () { funcS2() };
 				
 			}
 			
 			function funcS1A2(){ //leave through window
+				document.getElementById("Button2").style.backgroundColor = buttoncolor;
 				document.getElementById("Button2").innerHTML = S1A2.toString();
 				document.getElementById("Button2").onclick = function () { funcS3() };
 			}
 			
 			function funcS1A3(){ //leave through window with dagger
+				document.getElementById("Button3").style.backgroundColor = buttoncolor;
 				document.getElementById("Button3").innerHTML = S1A3.toString();
 				document.getElementById("Button3").onclick = function () { funcS3();
 				small_dagger = true;
@@ -211,11 +230,13 @@
 			}
 			
 				function funcS3A1(){ // to s4
+					document.getElementById("Button1").style.backgroundColor = buttoncolor;
 					document.getElementById("Button1").innerHTML = S3A1.toString();
 					document.getElementById("Button1").onclick = function () { funcS4() };
 				}
 				
 				function funcS3A2(){ //to inn
+					document.getElementById("Button2").style.backgroundColor = buttoncolor;
 					document.getElementById("Button2").innerHTML = S3A2.toString();
 					document.getElementById("Button2").onclick = function () { funcS10() };
 				}
@@ -232,11 +253,13 @@
 			}
 			
 				function funcS4A1(){ //to s6 // harbor guilt
+					document.getElementById("Button1").style.backgroundColor = buttoncolor;
 					document.getElementById("Button1").innerHTML = S4A1.toString();
 					document.getElementById("Button1").onclick = function () { funcS6() };
 				}
 				
 				function funcS4A2(){ // to s5
+					document.getElementById("Button2").style.backgroundColor = buttoncolor;
 					document.getElementById("Button2").innerHTML = S4A2.toString();
 					document.getElementById("Button2").onclick = function () { funcS5() };
 				}		
@@ -251,11 +274,13 @@
 			}
 			
 				function funcS5A1(){ //leads to S8. lose 10g
+					document.getElementById("Button1").style.backgroundColor = buttoncolor;
 					document.getElementById("Button1").innerHTML = S5A1.toString();
 					document.getElementById("Button1").onclick = function () { funcS8() };
 				}
 				
 				function funcS5A2(){ //get money // s7
+					document.getElementById("Button2").style.backgroundColor = buttoncolor;
 					document.getElementById("Button2").innerHTML = S5A2.toString();
 					document.getElementById("Button2").onclick = function () { funcS7() };
 				}		
@@ -270,12 +295,14 @@
 			}
 			
 				function funcS6A1(){ //back door of shady hound
+					document.getElementById("Button1").style.backgroundColor = buttoncolor;
 					document.getElementById("Button1").innerHTML = S6A1.toString();
 					document.getElementById("Button1").onclick = function () { funcS10() };
 					
 				}
 				
 				function funcS6A2(){ // go near sailors
+					document.getElementById("Button2").style.backgroundColor = buttoncolor;
 					document.getElementById("Button2").innerHTML = S6A2.toString();
 					document.getElementById("Button2").onclick = function () { funcS9() };
 					
@@ -292,12 +319,14 @@
 			}
 			
 				function funcS7A1(){ //to inn
+					document.getElementById("Button1").style.backgroundColor = buttoncolor;
 					document.getElementById("Button1").innerHTML = S7A1.toString();
 					document.getElementById("Button1").onclick = function () { funcS10() };
 					
 				}	
 				
 				function funcS7A2(){ //to harbor
+					document.getElementById("Button2").style.backgroundColor = buttoncolor;
 					document.getElementById("Button2").innerHTML = S7A2.toString();
 					document.getElementById("Button2").onclick = function () { funcS9() };
 				}				
@@ -314,11 +343,13 @@
 			}
 			
 				function funcS8A1(){ //to inn
+					document.getElementById("Button1").style.backgroundColor = buttoncolor;
 					document.getElementById("Button1").innerHTML = S8A1.toString();
 					document.getElementById("Button1").onclick = function () { funcS10() };
 				}			
 				
 				function funcS8A2(){ //to harbor
+					document.getElementById("Button2").style.backgroundColor = buttoncolor;
 					document.getElementById("Button2").innerHTML = S8A2.toString();
 					document.getElementById("Button2").onclick = function () { funcS9() };
 				}		
@@ -334,11 +365,13 @@
 			}
 			
 				function funcS9A1(){ //to inn
+					document.getElementById("Button1").style.backgroundColor = buttoncolor;
 					document.getElementById("Button1").innerHTML = S9A1.toString();
 					document.getElementById("Button1").onclick = function () { funcS9S1() };
 				}			
 				
 				function funcS9A2(){ //to harbor
+					document.getElementById("Button2").style.backgroundColor = buttoncolor;
 					document.getElementById("Button2").innerHTML = S9A2.toString();
 					document.getElementById("Button2").onclick = function () { funcS9S1() };
 				}		
@@ -353,11 +386,13 @@
 			}
 			
 				function funcS9S1A1(){ //to inn
+					document.getElementById("Button1").style.backgroundColor = buttoncolor;
 					document.getElementById("Button1").innerHTML = S9S1A1.toString();
 					document.getElementById("Button1").onclick = function () { funcS9S1() };
 				}			
 				
 				function funcS9S1A2(){ //to harbor
+					document.getElementById("Button2").style.backgroundColor = buttoncolor;
 					document.getElementById("Button2").innerHTML = S9S1A2.toString();
 					document.getElementById("Button2").onclick = function () { funcS9S1() };
 				}		
@@ -372,11 +407,13 @@
 			}
 			
 				function funcS10A1(){ //to inn
+					document.getElementById("Button1").style.backgroundColor = buttoncolor;
 					document.getElementById("Button1").innerHTML = S10A1.toString();
 					document.getElementById("Button1").onclick = function () { funcS10S1() };
 				}			
 				
 				function funcS10A2(){ //to harbor
+					document.getElementById("Button2").style.backgroundColor = buttoncolor;
 					document.getElementById("Button2").innerHTML = S10A2.toString();
 					document.getElementById("Button2").onclick = function () { funcS10S1() };
 				}	
