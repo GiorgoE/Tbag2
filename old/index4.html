@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+	<title>Text Based Adventure Game</title>
+	
+	<script>
+		
+		var clear = "";
+		var S1 = "What are you doing here?";
+			var S1A1 = "I want to learn to code";
+			var S1A2 = "I want to go on an adventure. Bitch";
+		
+		var S2 = "Cool";
+		var S3 = "Fuck Off";
+	 
+	
+	 
+		function clearButtons(){
+			document.getElementById("Button1").innerHTML = clear.toString();
+			document.getElementById("Button2").innerHTML = clear.toString();
+		}
+		
+		
+		function funcS1(){
+			document.getElementById("Statement").innerHTML = S1.toString();
+		}
+		
+			function funcS1A1(){
+				document.getElementById("Button1").innerHTML = S1A1.toString();
+			}
+			
+			function funcS1A2(){
+				document.getElementById("Button2").innerHTML = S1A2.toString();
+			}
+		
+		function funcS2(){
+			document.getElementById("Statement").innerHTML = S2.toString();
+			//clearButtons();
+			
+		}
+		
+		function funcS3(){
+			document.getElementById("Statement").innerHTML = S3.toString();
+			//clearButtons();
+			}
+			
+		
+		
+		
+	</script>
+</head>
+
+<body onload="funcS1(); funcS1A1(); funcS1A2();">
+
+	<p id="Statement"></p>
+	
+	<button id="Button1" onclick = "funcS2()" >S1A1</button>
+	</br>
+	<button id="Button2" onclick = "funcS3()" >S1A2</button>
+	
+	
+	
+</body>
+</html>

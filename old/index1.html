@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+	<title>Text Based Adventure Game</title>
+</head>
+
+<body>
+	<button id="BUTTON1">Buttonnn</button>
+	<button id="clear">Clear</button>
+	<div id="results"></div>
+	
+	
+<script src="js/zepto.js"></script>
+<script src="js/silly.js"></script>
+
+<script>
+$('#BUTTON1').click(function(){
+	BUTTON1.DoIt($('#results'));
+});
+
+$('#clear').click(function(){
+	$('#results').html('');
+});
+</script>
+	
+</body>
+</html>
