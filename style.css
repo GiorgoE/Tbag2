@@ -50,6 +50,10 @@ body {
 
 }
 
+.item {
+	display: none;
+}
+
 #attributes {
 	float: right;
 	margin-right: 5%;

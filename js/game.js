@@ -135,14 +135,28 @@
 			document.getElementById("Button1").onclick = function () { funcS1() };
 		}
         
-			
+		
+		function dropdown(){ 
+		    var disp = document.getElementsByClassName('item');
+			for(i=0; i<disp.length; i++) 
+			{
+				if (disp[i].style.display != 'none')
+				{
+						disp[i].style.display = 'none';
+				} else {
+						disp[i].style.display = 'block';
+				}
+			}
+		}
+		
+		
 			
 		function fadeitoutandin(){ 
 		  		$('#statementdiv').fadeOut(0);
 				$("#statementdiv").fadeIn(800);
 				document.getElementById("gold").innerHTML = "gold : " + gold;
 				document.getElementById("str").innerHTML = "Strength : " + str;
-				document.getElementById("int").innerHTML = "Intelligence : " + int;
+				document.getElementById("int").innerHTML = "Intel : " + int;
 				document.getElementById("cha").innerHTML = "Charisma : " + cha;
 				document.getElementById("luck").innerHTML = "Luck : " + luck;
 				
