@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+	<title>Text Based Adventure Game</title>
+	
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+    
+    <!--
+    <script>
+    $(document).ready(function(){
+    //$("#mask").click(function(){
+    $("#statementdiv").fadeIn(800);
+    //});
+    });
+    </script>
+	-->
+    
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body id="body" onLoad="funcIntro();">
+
+<div id="mask" onClick="fadeitoutandin();">    
+<div id="statementdiv">
+	<h4 id="Statement"></h4>
+	
+
+    
+	<p class="buttons" id="Button1" onclick = "funcS2()" ></p>
+	<p class="buttons" id="Button2" onclick = "funcS3()" ></p>
+    <p class="buttons" id="Button3" onclick = "funcS3()" ></p>
+    
+    </br>
+    <div id="inventory">
+    <p>Inventory</p>
+    <p class="item" id="gold"></p>
+    <p class="item" id="small_dagger"></p>
+    
+    <img width="20" onClick="dropdown()" id="left-down" src="images/arrow-icon2.png">
+    
+    </div>
+    
+    </br>
+    
+    
+    <div id="attributes">
+    <p>Attributes</p>
+    <p class="attr" id="str"></p>
+    <p class="attr" id="int"></p>
+    <p class="attr" id="cha"></p>
+    <p class="attr" id="luck"></p>
+    
+    
+    <img width="20" onClick="dropdown2()" id="rightdown" src="images/arrow-icon2.png">
+    </div>
+    
+</div>
+</div>
+	
+</body>
+</html>

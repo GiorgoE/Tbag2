@@ -40,7 +40,7 @@ body {
 #inventory {
 	float: left;
 	margin-left: 5%;
-	margin-top: 19px;
+	margin-top: 20px;
 	color: #CCC;
 	border-style: solid;
 	border-color: #CCC;
@@ -77,3 +77,21 @@ body {
     margin-left: auto;
     margin-right: auto;
 		}
+#body #mask h2 {
+	text-transform: capitalize;
+	text-align: center;
+}
+
+#body #mask #logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 300px;
+}
+
+#body #mask #startgame {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+}
