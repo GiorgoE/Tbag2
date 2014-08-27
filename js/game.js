@@ -42,53 +42,82 @@
 /////////////////STORY//////////////////////////////////
 		
 		var intro = "You awaken in a large bed, the sun pouring softly through the curtains. You can't remember how you got here but it certainly isn't your bed. Suddenly there's a raptuous knock on the door there's shouting to open up.";
-			var introA1 = "Tap here to begin the game.";
+			var introa = "Tap here to begin the game.";
 			
-		var S1 ="'Are you in there " + name + "!? If I catch you with my daughter I'll kill you!!' Only then do you notice the beautiful brunette in the bed who has now roused from her slumber.";
-			var S1A1 = "'Bring it on!'"; //leads to S2
-			var S1A2 = "Time to go. Kiss the girl and leave through the window."; //leads to S3
-			var S1A3 = "Time to go. Pick up the dagger and jump through the window";//leads to S3
+		var s1 ="'Are you in there " + name + "!? If I catch you with my daughter I'll kill you!!' Only then do you notice the beautiful brunette in the bed who has now roused from her slumber.";
+			var s1a = "'Bring it on!'"; //leads to s2
+			var s1b = "Time to go. Kiss the girl and leave through the window."; //leads to s2i
+			var s1c = "Time to go. Pick up the dagger and jump through the window";//leads to s2i
 		
-		var S2 = "The brunette girls father bursts in the door and kills you. You are dead."; //die
+		var s2 = "The brunette girls father bursts in the door and kills you. You are dead."; //die
 		
 		
-		var S3 = "You jump out of the window on to some crates and make your way down an alley and dissapear into a marketplace. You can hear the shouting in the bedroom you came from.";
-			var S3A1 = "Keep running to try and get as far away as possible.";//leads to s4
-			var S3A2 = "Try to find the nearest inn";//leads to S10
+		var s2i = "You jump out of the window on to some crates and make your way down an alley and dissapear into a marketplace. You can hear the shouting in the bedroom you came from.";
+			var s2ia = "Keep running to try and get as far away as possible.";//leads to s3
+			var s2ib = "Try to find the nearest inn";//leads to s3i
 			
-		var S4 = "In your haste you run into a large man who mistakes you for a thief based on your scruffy looks and mischievous smile. He accuses you of being a pickpocket.";
-			var S4A1 = "Try to run!";//leads to S6
-			var S4A2 = "Explain that you are not a thief, and empty your pockets.";//leads to S5
+		var s3 = "In your haste you run into a large man who mistakes you for a thief based on your scruffy looks and mischievous smile. He accuses you of being a pickpocket.";
+			var s3a = "Try to run!";//leads to s4
+			var s3b = "Explain that you are not a thief, and empty your pockets.";//leads to s4i
 			
-		var S5 = "He's not convinced, he still thinks you're up to something. He threatens to call the guards to search you and since he looks like a wealthy fat merchant and you look like a thief, who are they going to believe?"
-			var S5A1 = "Offer to pay him 5 gold to get lost and leave you alone";//leads to s8. lose 5g
-			var S5A2 = "Threaten him to keep his fat mouth shut and give you whatever he's got or you'll show how much painful a quick knife to the stomach can be..";//leads to s7. gives you money
+		var s3i = "You arrive at the Shady Hound, a notoriously treacherous place filled with sailors and thieves but the ale is good and the food is edible (most of the time). You grab a meal and a drink and leave feeling better. (+1 Strength)";
+			var s3ia = "Time to head down to the harbour now to see what mischief I can get up to I think."; // to s6
+			
+			
+			
+		var s4i = "He's not convinced, he still thinks you're up to something. He threatens to call the guards to search you and since he looks like a wealthy fat merchant and you look like a thief, who are they going to believe?"
+			var s4ia = "Offer to pay him 5 gold to get lost and leave you alone";//leads to s5. lose 5g
+			var s4ib = "Threaten him to keep his fat mouth shut and give you whatever he's got or you'll show how much painful a quick knife to the stomach can be..";//leads to s5i. gives you money
 		
 		
 		//harbor	
-		var S6 = "He takes your running as an indication of guilt and calls the guards to chase after you. They are quick but years of running away have taught you the ins and outs of the city and you make your way to the harbor where there are lots of places to hide and blend in.";
-			var S6A1 = "Run into the backdoor of the nearest building there."; // leads to back door of the Shady hound
-			var S6A2 = "Hide by the dodgy looking sailor men"; // leads to talking to men.
+		var s4 = "He takes your running as an indication of guilt and calls the guards to chase after you. They are quick but years of running away have taught you the ins and outs of the city and you make your way to the harbor where there are lots of places to hide and blend in.";
+			var s4a = "Run into the backdoor of the nearest building there."; // leads to back door of the Shady hound
+			var s4b = "Hide by the dodgy looking sailor men"; // leads to talking to men.
 	 
 		var plusgold1 = Math.floor((Math.random() * 100) + 1);
-		var S7 = "The man looks fearful now and hastily hands over what he has before leaving quickly. You are now " + plusgold1 + " richer and that should be useful in the future. You leave and think about where to spend your newfound gold.";
-			var S7A1 = "The inn of course!"; // Leads to S10 with the inn
-			var S7A2 = "Take a walk around the harbor and see what opportunities arise because you're feeling lucky today.";//S9 //leads to harbor
+		
+		var s5i = "The man looks fearful now and hastily hands over what he has before leaving quickly. You are now " + plusgold1 + " richer and that should be useful in the future. You leave and think about where to spend your newfound gold.";
+			var s5ia = "The inn of course!"; // Leads to s3i with the inn
+			var s5ib = "Take a walk around the harbor and see what opportunities arise because you're feeling lucky today.";//s6 //leads to harbor
 			
-		var S8 = "The fat man muscles you into giving him 10 gold and you concede because you're not looking for anymore trouble today. You go your seperate ways he heads back to the market and you head..";
-			 var S8A1 = "To the inn, to drown away your sorrows.";//leads to S10
-			 var S8A2 = "To the harbor to see if you can make some of that lost money back."; //leads to S9
+		var s5 = "The fat man muscles you into giving him 10 gold and you concede because you're not looking for anymore trouble today. You go your seperate ways he heads back to the market and you head..";
+			 var s5a = "To the inn, to drown away your sorrows.";//leads to s3i
+			 var s5b = "To the harbor to see if you can make some of that lost money back."; //leads to s6
 		
 		//harbor
-		var S9	="You wander through the shipments by the bulky sailors hardened by the sea then a voice whispers to you and out of the corner of your eye you see a man in the shadows of an entry. You warily walk over to see what he has to say.";
-			var S9A1 ="What do you want?";//leads to S9.1
-			var S9A2 ="...";// leads to S9.1
+		var s6	="You wander through the shipments by the bulky sailors hardened by the sea then a voice whispers to you and out of the corner of your eye you see a man in the shadows of an entry. You warily walk over to see what he has to say.";
+			var s6a ="What do you want?";//leads to s6.1
+			var s6b ="...";// leads to s6.1
 			
-		var S9S1 ="creepy man talking"; //creepy man talking
-			var S9S1A1 ="you ";
+		var s7 ="I've seen you round the town today, you look like someone who knows his way around the shadows. How'd you feel like making some money?"; //creepy man talking
+			var s7a ="I'm listening.";
+			var s7b ="No thanks, not interested.";
 		
-		var S10 = "You arrive at the Shady Hound, a notoriously treacherous place filled with sailors and thieves but the ale is good and the food is edible (most of the time). *******";
+		var s8 = "Hear me out kid, I can make it worth your while...";
+			var s8a ="What is it old man?";
+			var s8b ="No.";
+			
 		
+		var s9 = "The name's Falanar and I have a proposition for ya. You help me get something back that belongs to me and if you succeed I'll pay you handsomly for your efforts";
+			var s9a ="How handsomly are we talking here?";
+			var s9b ="You want me to steal something?";
+			var s9c ="What's the catch?";
+			
+		var chance1 = (cha * 10);
+		var chance1b = Math.floor((Math.random() * 100) + 1);
+			
+		var s10 = "Aye, I can pay ya 30 gold for yer time.";
+			var s10a ="Alright then now we're talking.";
+			var s10b ="(" + chance1 + " % chance of success) Not enough, I'm thinking more like 50.";
+	
+		
+		var s10i = "Not much, it's kept in a box above the mantlepiece in the living room. Shouldn't be a problem for someone such as yourself";
+			var s10ia ="";
+			
+		var s11 = "(SUCCESS) Okay, 50 then. But you best be quiet about it.";
+		
+		var s11i = "(FAIL) I don't think so kid, it's 30 or nothing.";
 		
 		
      ////////// CSS FUNCS //////////////
@@ -124,7 +153,7 @@
 		
 		//function restart2(){
 		//	document.getElementById("Button1").innerHTML = restart2.toString();
-		//	document.getElementById("Button1").onclick = function () { funcS5() };		
+		//	document.getElementById("Button1").onclick = function () { funcs4i() };		
 		//} 
 		
 
@@ -132,7 +161,7 @@
 			clearButtons();
 			document.getElementById("Statement").innerHTML = win.toString();
 			document.getElementById("Button1").innerHTML = restart.toString();
-			document.getElementById("Button1").onclick = function () { funcS1() };
+			document.getElementById("Button1").onclick = function () { funcs1() };
 		}
         
 		
@@ -190,47 +219,47 @@
 		
 		function funcIntro(){ 
 			document.getElementById("Statement").innerHTML = intro.toString();
-			funcIntroA1();
+			funcIntroa();
 			
 		}
-			function funcIntroA1(){
+			function funcIntroa(){
 					document.getElementById("Button1").style.backgroundColor = buttoncolor;
-					document.getElementById("Button1").innerHTML = introA1.toString();
-					document.getElementById("Button1").onclick = function () { funcS1() };
+					document.getElementById("Button1").innerHTML = introa.toString();
+					document.getElementById("Button1").onclick = function () { funcs1() };
 					//document.onClick.$("p").fadeOut("5000"); - attempt at fade
 					
 				}
 		
 		
-	////////// S1 = "'Are you in there " + name + "!? If I catch you with my daughter I'll kill you!!' You notice the beautiful brunette in the bed." //////////
+	////////// s1 = "'Are you in there " + name + "!? If I catch you with my daughter I'll kill you!!' You notice the beautiful brunette in the bed." //////////
 		
-		function funcS1(){ 
+		function funcs1(){ 
 			
-			document.getElementById("Statement").innerHTML = S1.toString();
-			funcS1A1();
-			funcS1A2();
-			funcS1A3();
+			document.getElementById("Statement").innerHTML = s1.toString();
+			funcs1a();
+			funcs1b();
+			funcs1c();
 			
 			
 		}
 		
-			function funcS1A1(){ // stay + die
+			function funcs1a(){ // stay + die
 				document.getElementById("Button1").style.backgroundColor = buttoncolor;
-				document.getElementById("Button1").innerHTML = S1A1.toString();
-				document.getElementById("Button1").onclick = function () { funcS2() };
+				document.getElementById("Button1").innerHTML = s1a.toString();
+				document.getElementById("Button1").onclick = function () { funcs2() };
 				
 			}
 			
-			function funcS1A2(){ //leave through window
+			function funcs1b(){ //leave through window
 				document.getElementById("Button2").style.backgroundColor = buttoncolor;
-				document.getElementById("Button2").innerHTML = S1A2.toString();
-				document.getElementById("Button2").onclick = function () { funcS3() };
+				document.getElementById("Button2").innerHTML = s1b.toString();
+				document.getElementById("Button2").onclick = function () { funcs2i() };
 			}
 			
-			function funcS1A3(){ //leave through window with dagger
+			function funcs1c(){ //leave through window with dagger
 				document.getElementById("Button3").style.backgroundColor = buttoncolor;
-				document.getElementById("Button3").innerHTML = S1A3.toString();
-				document.getElementById("Button3").onclick = function () { funcS3();
+				document.getElementById("Button3").innerHTML = s1c.toString();
+				document.getElementById("Button3").onclick = function () { funcs2i();
 				small_dagger = true;
 				document.getElementById("small_dagger").innerHTML = "Small Dagger";
 				};
@@ -238,209 +267,335 @@
 			}
 			
 			
-	////////// S2. You are dead.//////////		
+	////////// s2. You are dead.//////////		
 		
-		function funcS2(){
-			document.getElementById("Statement").innerHTML = S2.toString();
+		function funcs2(){
+			document.getElementById("Statement").innerHTML = s2.toString();
 			clearButtons();
 			restart1();
 		}
 		
 		
-////////// S3 = "You jump out of the window on to some crates and make your way down an alley and dissapear into a marketplace. You can hear the shouting in the bedroom you came from.//////////
+////////// s2i = "You jump out of the window on to some crates and make your way down an alley and dissapear into a marketplace. You can hear the shouting in the bedroom you came from.//////////
 		
-		function funcS3(){
-			document.getElementById("Statement").innerHTML = S3.toString();
+		function funcs2i(){
+			document.getElementById("Statement").innerHTML = s2i.toString();
 			clearButtons();
-			funcS3A1();
-			funcS3A2();
+			funcs2ia();
+			funcs2ib();
 			}
 			
-				function funcS3A1(){ // to s4
+				function funcs2ia(){ // to s3
 					document.getElementById("Button1").style.backgroundColor = buttoncolor;
-					document.getElementById("Button1").innerHTML = S3A1.toString();
-					document.getElementById("Button1").onclick = function () { funcS4() };
+					document.getElementById("Button1").innerHTML = s2ia.toString();
+					document.getElementById("Button1").onclick = function () { funcs3() };
 				}
 				
-				function funcS3A2(){ //to inn
+				function funcs2ib(){ //to inn
 					document.getElementById("Button2").style.backgroundColor = buttoncolor;
-					document.getElementById("Button2").innerHTML = S3A2.toString();
-					document.getElementById("Button2").onclick = function () { funcS10() };
+					document.getElementById("Button2").innerHTML = s2ib.toString();
+					document.getElementById("Button2").onclick = function () { funcs3i() };
 				}
 				
 				
 			
-//////////S4 = "In your haste you run into a large man who mistakes you for a thief based on your scruffy looks and mischievous smile. He accuses you of being a pickpocket.//////////
+//////////s3 = "In your haste you run into a large man who mistakes you for a thief based on your scruffy looks and mischievous smile. He accuses you of being a pickpocket.//////////
 		
-		function funcS4(){
-			document.getElementById("Statement").innerHTML = S4.toString();
+		function funcs3(){
+			document.getElementById("Statement").innerHTML = s3.toString();
 			clearButtons();
-			funcS4A1();
-			funcS4A2();
+			funcs3a();
+			funcs3b();
 			}
 			
-				function funcS4A1(){ //to s6 // harbor guilt
+				function funcs3a(){ //to s4 // harbor guilt
 					document.getElementById("Button1").style.backgroundColor = buttoncolor;
-					document.getElementById("Button1").innerHTML = S4A1.toString();
-					document.getElementById("Button1").onclick = function () { funcS6() };
+					document.getElementById("Button1").innerHTML = s3a.toString();
+					document.getElementById("Button1").onclick = function () { funcs4() };
 				}
 				
-				function funcS4A2(){ // to s5
+				function funcs3b(){ // to s4i
 					document.getElementById("Button2").style.backgroundColor = buttoncolor;
-					document.getElementById("Button2").innerHTML = S4A2.toString();
-					document.getElementById("Button2").onclick = function () { funcS5() };
+					document.getElementById("Button2").innerHTML = s3b.toString();
+					document.getElementById("Button2").onclick = function () { funcs4i() };
 				}		
 		
-////////// S5 = "He's not convinced, he still thinks you're up to something. He threatens to call the guards to search you and since he looks like a wealthy fat merchant and you look like a thief, who are they going to believe?""//////////
 		
-		function funcS5(){
-			document.getElementById("Statement").innerHTML = S5.toString();
+		////////// s3i = "You arrive at the Shady Hound, a notoriously treacherous place filled with sailors and thieves but the ale is good and the food is edible (most of the time). *******"//////////
+		
+		function funcs3i(){
+			document.getElementById("Statement").innerHTML = s3i.toString();
 			clearButtons();
-			funcS5A1();
-			funcS5A2();
+			funcs3ia();
+			str = str + 1;
 			}
 			
-				function funcS5A1(){ //leads to S8. lose 10g
+				function funcs3ia(){ //to harbor
 					document.getElementById("Button1").style.backgroundColor = buttoncolor;
-					document.getElementById("Button1").innerHTML = S5A1.toString();
-					document.getElementById("Button1").onclick = function () { funcS8() };
+					document.getElementById("Button1").innerHTML = s3ia.toString();
+					document.getElementById("Button1").onclick = function () { funcs6() };
+					
+				}			
+				
+				
+		
+		
+////////// s4i = "He's not convinced, he still thinks you're up to something. He threatens to call the guards to search you and since he looks like a wealthy fat merchant and you look like a thief, who are they going to believe?""//////////
+		
+		function funcs4i(){
+			document.getElementById("Statement").innerHTML = s4i.toString();
+			clearButtons();
+			funcs4ia();
+			funcs4ib();
+			}
+			
+				function funcs4ia(){ //leads to s5. lose 10g
+					document.getElementById("Button1").style.backgroundColor = buttoncolor;
+					document.getElementById("Button1").innerHTML = s4ia.toString();
+					document.getElementById("Button1").onclick = function () { funcs5() };
 				}
 				
-				function funcS5A2(){ //get money // s7
+				function funcs4ib(){ //get money // s5i
 					document.getElementById("Button2").style.backgroundColor = buttoncolor;
-					document.getElementById("Button2").innerHTML = S5A2.toString();
-					document.getElementById("Button2").onclick = function () { funcS7() };
+					document.getElementById("Button2").innerHTML = s4ib.toString();
+					document.getElementById("Button2").onclick = function () { funcs5i() };
 				}		
 		
-////////// S6 = "He takes your running as an indication of guilt and calls the guards to chase after you. They are quick but years of running away have taught you the ins and outs of the city and you make your way to the harbor where there are lots of places to hide and blend in.";//////////
+////////// s4 = "He takes your running as an indication of guilt and calls the guards to chase after you. They are quick but years of running away have taught you the ins and outs of the city and you make your way to the harbor where there are lots of places to hide and blend in.";//////////
 		
-		function funcS6(){
-			document.getElementById("Statement").innerHTML = S6.toString();
+		function funcs4(){
+			document.getElementById("Statement").innerHTML = s4.toString();
 			clearButtons();
-			funcS6A1();
-			funcS6A2();
+			funcs4a();
+			funcs4b();
 			}
 			
-				function funcS6A1(){ //back door of shady hound
+				function funcs4a(){ //back door of shady hound
 					document.getElementById("Button1").style.backgroundColor = buttoncolor;
-					document.getElementById("Button1").innerHTML = S6A1.toString();
-					document.getElementById("Button1").onclick = function () { funcS10() };
+					document.getElementById("Button1").innerHTML = s4a.toString();
+					document.getElementById("Button1").onclick = function () { funcs3i() };
 					
 				}
 				
-				function funcS6A2(){ // go near sailors
+				function funcs4b(){ // go near sailors
 					document.getElementById("Button2").style.backgroundColor = buttoncolor;
-					document.getElementById("Button2").innerHTML = S6A2.toString();
-					document.getElementById("Button2").onclick = function () { funcS9() };
+					document.getElementById("Button2").innerHTML = s4b.toString();
+					document.getElementById("Button2").onclick = function () { funcs6() };
 					
 				}
 	
-////////// S7 = "The man looks fearful now and hastily hands over what he has before leaving quickly. You are now " + plusgold1 + " richer and that should be useful in the future. You leave and think about where to spend your newfound gold."//////////
+////////// s5i = "The man looks fearful now and hastily hands over what he has before leaving quickly. You are now " + plusgold1 + " richer and that should be useful in the future. You leave and think about where to spend your newfound gold."//////////
 		
-		function funcS7(){
+		function funcs5i(){
 			gold = gold + plusgold1;
-			document.getElementById("Statement").innerHTML = S7.toString();
+			document.getElementById("Statement").innerHTML = s5i.toString();
 			clearButtons();
-			funcS7A1();
-			funcS7A2();
+			funcs5ia();
+			funcs5ib();
 			}
 			
-				function funcS7A1(){ //to inn
+				function funcs5ia(){ //to inn
 					document.getElementById("Button1").style.backgroundColor = buttoncolor;
-					document.getElementById("Button1").innerHTML = S7A1.toString();
-					document.getElementById("Button1").onclick = function () { funcS10() };
+					document.getElementById("Button1").innerHTML = s5ia.toString();
+					document.getElementById("Button1").onclick = function () { funcs3i() };
 					
 				}	
 				
-				function funcS7A2(){ //to harbor
+				function funcs5ib(){ //to harbor
 					document.getElementById("Button2").style.backgroundColor = buttoncolor;
-					document.getElementById("Button2").innerHTML = S7A2.toString();
-					document.getElementById("Button2").onclick = function () { funcS9() };
+					document.getElementById("Button2").innerHTML = s5ib.toString();
+					document.getElementById("Button2").onclick = function () { funcs6() };
 				}				
 				
 				
-////////// S8 = "The fat man muscles you into giving him 10 gold and you concede because you're not looking for anymore trouble today. You go your seperate ways he heads back to the market and you head.."//////////
+////////// s5 = "The fat man muscles you into giving him 10 gold and you concede because you're not looking for anymore trouble today. You go your seperate ways he heads back to the market and you head.."//////////
 		
-		function funcS8(){
+		function funcs5(){
 			gold = gold -10;
-			document.getElementById("Statement").innerHTML = S8.toString();
+			document.getElementById("Statement").innerHTML = s5.toString();
 			clearButtons();
-			funcS8A1();
-			funcS8A2();
+			funcs5a();
+			funcs5b();
 			}
 			
-				function funcS8A1(){ //to inn
+				function funcs5a(){ //to inn
 					document.getElementById("Button1").style.backgroundColor = buttoncolor;
-					document.getElementById("Button1").innerHTML = S8A1.toString();
-					document.getElementById("Button1").onclick = function () { funcS10() };
+					document.getElementById("Button1").innerHTML = s5a.toString();
+					document.getElementById("Button1").onclick = function () { funcs3i() };
 				}			
 				
-				function funcS8A2(){ //to harbor
+				function funcs5b(){ //to harbor
 					document.getElementById("Button2").style.backgroundColor = buttoncolor;
-					document.getElementById("Button2").innerHTML = S8A2.toString();
-					document.getElementById("Button2").onclick = function () { funcS9() };
+					document.getElementById("Button2").innerHTML = s5b.toString();
+					document.getElementById("Button2").onclick = function () { funcs6() };
 				}		
 				
 					
-////////// S9	="You wander through the markets by the bulky sailors hardened by the sea then a voice whispers to you and out of the corner of your eye you see a man in the shadows of an entry. You warily walk over to see what he has to say.//////////
+////////// s6	="You wander through the markets by the bulky sailors hardened by the sea then a voice whispers to you and out of the corner of your eye you see a man in the shadows of an entry. You warily walk over to see what he has to say.//////////
 		
-		function funcS9(){
-			document.getElementById("Statement").innerHTML = S9.toString();
+		function funcs6(){
+			document.getElementById("Statement").innerHTML = s6.toString();
 			clearButtons();
-			funcS9A1();
-			funcS9A2();
+			funcs6a();
+			funcs6b();
 			}
 			
-				function funcS9A1(){ //to inn
+				function funcs6a(){ //to inn
 					document.getElementById("Button1").style.backgroundColor = buttoncolor;
-					document.getElementById("Button1").innerHTML = S9A1.toString();
-					document.getElementById("Button1").onclick = function () { funcS9S1() };
+					document.getElementById("Button1").innerHTML = s6a.toString();
+					document.getElementById("Button1").onclick = function () { funcs7() };
 				}			
 				
-				function funcS9A2(){ //to harbor
+				function funcs6b(){ //to harbor
 					document.getElementById("Button2").style.backgroundColor = buttoncolor;
-					document.getElementById("Button2").innerHTML = S9A2.toString();
-					document.getElementById("Button2").onclick = function () { funcS9S1() };
+					document.getElementById("Button2").innerHTML = s6b.toString();
+					document.getElementById("Button2").onclick = function () { funcs7() };
 				}		
 				
-////////// S9S1 creepy//////////
+////////// s7 creepy//////////
 		
-		function funcS9S1(){
-			document.getElementById("Statement").innerHTML = S9S1.toString();
+		function funcs7(){
+			document.getElementById("Statement").innerHTML = s7.toString();
 			clearButtons();
-			funcS9S1A1();
-			funcS9S1A2();
+			funcs7a();
+			funcs7b();
 			}
 			
-				function funcS9S1A1(){ //to inn
+				function funcs7a(){ //to inn
 					document.getElementById("Button1").style.backgroundColor = buttoncolor;
-					document.getElementById("Button1").innerHTML = S9S1A1.toString();
-					document.getElementById("Button1").onclick = function () { funcS9S1() };
+					document.getElementById("Button1").innerHTML = s7a.toString();
+					document.getElementById("Button1").onclick = function () { funcs9() };
 				}			
 				
-				function funcS9S1A2(){ //to harbor
+				function funcs7b(){ //to harbor
 					document.getElementById("Button2").style.backgroundColor = buttoncolor;
-					document.getElementById("Button2").innerHTML = S9S1A2.toString();
-					document.getElementById("Button2").onclick = function () { funcS9S1() };
+					document.getElementById("Button2").innerHTML = s7b.toString();
+					document.getElementById("Button2").onclick = function () { funcs8() };
 				}		
 				
-////////// S10 = "You arrive at the Shady Hound, a notoriously treacherous place filled with sailors and thieves but the ale is good and the food is edible (most of the time). *******"//////////
+				
+////////// s8 hear me out//////////
 		
-		function funcS10(){
-			document.getElementById("Statement").innerHTML = S10.toString();
+		function funcs8(){
+			document.getElementById("Statement").innerHTML = s8.toString();
 			clearButtons();
-			funcS10A1();
-			funcS10A2();
+			funcs8a();
+			funcs8b();
 			}
 			
-				function funcS10A1(){ //to inn
+				function funcs8a(){ //to s9
 					document.getElementById("Button1").style.backgroundColor = buttoncolor;
-					document.getElementById("Button1").innerHTML = S10A1.toString();
-					document.getElementById("Button1").onclick = function () { funcS10S1() };
+					document.getElementById("Button1").innerHTML = s8a.toString();
+					document.getElementById("Button1").onclick = function () { funcs9() };
 				}			
 				
-				function funcS10A2(){ //to harbor
+				function funcs8b(){ //need to fix
 					document.getElementById("Button2").style.backgroundColor = buttoncolor;
-					document.getElementById("Button2").innerHTML = S10A2.toString();
-					document.getElementById("Button2").onclick = function () { funcS10S1() };
+					document.getElementById("Button2").innerHTML = s8b.toString();
+					document.getElementById("Button2").onclick = function () { funcs9() };
+				}		
+				
+
+	////////// s9 = Names Falanar//////////
+		
+		function funcs9(){ 
+			
+			document.getElementById("Statement").innerHTML = s9.toString();
+			funcs9a();
+			funcs9b();
+			funcs9c();
+			
+			
+		}
+		
+			function funcs9a(){ // stay + die
+				document.getElementById("Button1").style.backgroundColor = buttoncolor;
+				document.getElementById("Button1").innerHTML = s9a.toString();
+				document.getElementById("Button1").onclick = function () { funcs10() };
+				
+			}
+			
+			function funcs9b(){ //leave through window
+				document.getElementById("Button2").style.backgroundColor = buttoncolor;
+				document.getElementById("Button2").innerHTML = s9b.toString();
+				document.getElementById("Button2").onclick = function () { funcs10() };
+			}
+			
+			function funcs9c(){ //leave through window with dagger
+				document.getElementById("Button3").style.backgroundColor = buttoncolor;
+				document.getElementById("Button3").innerHTML = s9c.toString();
+				document.getElementById("Button3").onclick = function () { funcs10i();
+				}
+			}
+			
+////////// s10 hear me out//////////
+		
+		function funcs10(){
+			document.getElementById("Statement").innerHTML = s10.toString();
+			clearButtons();
+			funcs10a();
+			funcs10b();
+			}
+			
+				function funcs10a(){ //to ???
+					document.getElementById("Button1").style.backgroundColor = buttoncolor;
+					document.getElementById("Button1").innerHTML = s10a.toString();
+					document.getElementById("Button1").onclick = function () { funcs9() };
+				}			
+				
+				
+				
+				function funcs10b(){ //to s11 or s11i
+					document.getElementById("Button2").style.backgroundColor = buttoncolor;
+					document.getElementById("Button2").innerHTML = s10b.toString();
+					document.getElementById("Button2").onclick = function ()
+					{ 
+					if (chance1 >= chance1b) 
+					{
+						funcs11() 
+						
+					}else{
+						
+						funcs11i()
+					}
+					};
+				}
+				
+			
+				
+				
+////////// s11 success//////////
+		
+		function funcs11(){
+			document.getElementById("Statement").innerHTML = s11.toString();
+			clearButtons();
+			funcs10a();
+			}
+			
+				function funcs10a(){ //to ??
+					document.getElementById("Button1").style.backgroundColor = buttoncolor;
+					document.getElementById("Button1").innerHTML = s10a.toString();
+					document.getElementById("Button1").onclick = function () { funcSWIN() };
+				}			
+				
+////////// s11i failure//////////
+		
+		function funcs11(){
+			document.getElementById("Statement").innerHTML = s11.toString();
+			clearButtons();
+			funcs10a();
+			funcs10ib();
+
+			}
+			
+				function funcs10a(){ //to ??
+					document.getElementById("Button1").style.backgroundColor = buttoncolor;
+					document.getElementById("Button1").innerHTML = s10a.toString();
+					document.getElementById("Button1").onclick = function () { funcSWIN() };
+				}	
+				
+				function funcs10ib(){ //to ??
+					document.getElementById("Button1").style.backgroundColor = buttoncolor;
+					document.getElementById("Button1").innerHTML = s10a.toString();
+					document.getElementById("Button1").onclick = function () { funcSWIN() };
 				}	
